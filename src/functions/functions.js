@@ -15,7 +15,7 @@ async function getMaps() {
 // Get a single map from GeoNode API. When a user clicks on a map, this function is called to get the map details
 async function getMap(pk) {
     const response = await axios.get(`${apiURL}${mapsEndpoint}${pk}`);
-    console.log(response.data);
+    //console.log(response.data);
     return response.data;
 }
 
