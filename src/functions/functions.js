@@ -24,9 +24,9 @@ async function mapDetails() {
     const maps = await getMaps();
     const mapDetails = maps.maps.map(async map => {
         const mapDetails = await getMap(map.pk);
+        console.log(mapDetails);
         return mapDetails;
     });
-    console.log(mapDetails);
 }
 
 mapDetails();
