@@ -30,6 +30,11 @@ class MapLayers {
         });
     }
 
+    // remove a layer from the maplayers array by pk
+    removeLayer(pk) {
+        this.layers = this.layers.filter(layer => layer.pk !== pk);
+    }
+
 }
 
 export { MapLayers };

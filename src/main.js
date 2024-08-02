@@ -93,7 +93,7 @@ async function runApp() {
             // Log the layers of the selected map
             console.log('Current layers in the map:');
             mapLayers.layers.forEach(layer => {
-                console.log(`${layer.dataset.title} - with pk: ${layer.dataset.pk}`);
+                console.log(`${layer.dataset.title} - with pk: ${layer.pk}`);
             });
 
             // Provide options for selecting a new map or adding/removing layers
@@ -128,7 +128,7 @@ async function runApp() {
             } else if (action === 'remove_layer') {
                 // Prompt the user for a map layer pk to remove
                 const layerPk = await promptUserForLayerPk();
-                await mapLayers.removeLayer(layerPk);
+                mapLayers.removeLayer(layerPk);
             }
         }
     }
